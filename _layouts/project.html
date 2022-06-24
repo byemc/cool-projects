@@ -19,9 +19,9 @@ layout: default
         <div id="buttons">
             {% for button in page.buttons %}
             {% if button.icon %}
-                <a href="{{ button.link }}" class="button"><i class="fa-solid fa-{{ button.icon }}"></i> {{ button.name }}</a>
+                <a href="{{ button.link }}" class="button"><i class="fa-solid fa-{{ button.icon }}-square"></i> {{ button.name }}</a>
             {% else %}
-            <a href="{{ button.link }}" class="button"><i class="fa-solid fa-arrow-up-right-from-square"></i> {{ button.name }}</a>
+                <a href="{{ button.link }}" class="button"><i class="fa-solid fa-arrow-up-right-from-square"></i> {{ button.name }}</a>
             {% endif %} 
             {% endfor %}
         </div>
@@ -30,6 +30,4 @@ layout: default
 
 {{ content }}
 
-<head>
 <script src="https://kit.fontawesome.com/8ec6ed3b99.js" crossorigin="anonymous"></script>
-</head>
