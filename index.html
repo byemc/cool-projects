@@ -2,12 +2,24 @@
 layout: default
 ---
 
-<p>{{ site.description }}</p>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/index.css">
 
-<ul>
-    {% for project in site.projects %}
-        <li>
-            <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
-        </li>
-    {% endfor %}
-</ul>
+<p>{{ site.description }}</p>
+<p>Descriptions are a mix of one taken from the site or written by me. Any mentions of products or services are decided by <i>me</i>, not the person running the service. I just decided to write down a list of cool stuff, not get paid to endorse them lol.</p>
+
+{% for project in site.projects %}
+    <div class="projectchip">
+        <a href="{{ site.baseurl }}{{ project.url }}">
+            {% if project.banner %}
+                <img src="{{ project.banner }}" alt="{{ project.title }}'s banner image">  
+            {% endif %}
+            <div class="titlecard">
+                {% if project.icon %}
+                    <img src="{{ project.icon }}" alt="{{ project.title }}'s icon">
+                {% endif %}
+                <h2>{{ project.title }}</h2>
+            </div>
+        </a>
+        <p class="description">{{ project.description | smartify }}</p>
+    </div>
+{% endfor %}

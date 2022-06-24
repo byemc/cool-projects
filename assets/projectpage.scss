@@ -1,6 +1,8 @@
 ---
 --- 
 
+@import url('{{ site.baseurl}}/assets/index.css');
+
 div#projectheader {
     display: flex;
 }
@@ -18,6 +20,11 @@ div#projectheader::after {
     border-radius: 1.25em;
     float: left;
     margin-right: 1em;
+    // background: linear-gradient(to bottom, rgb(219, 76, 76) 0%, rgb(180, 89, 84) 100%);
+}
+
+div#somebasicinfo {
+    width: 100%;
 }
 
 h1#title {
@@ -35,14 +42,14 @@ p#description {
 
 div#buttons {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     font-size: 1.5em;
 
     a.button {
         text-decoration: none;
         border-radius: 0.25em;
         padding: 0.5em 1em;
-        margin: 0.5em;
+        margin: 0.5em 0.5em 0.5em 0;
         display: inline-block;
         transition: all 0.2s ease-in-out;
 
