@@ -1,0 +1,55 @@
+---
+--- 
+
+div#projectheader {
+    display: flex;
+}
+
+div#projectheader::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#icon {
+    // icon should be square, but I'm not setting a height in case it isn't
+    max-width:200px;
+    max-height: 200px;
+    border-radius: 1.25em;
+    float: left;
+    margin-right: 1em;
+}
+
+h1#title {
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+    border-bottom: 0;
+    padding: 0;
+}
+
+p#description {
+    font-size: 24px;
+    margin: 0;  
+}
+
+div#buttons {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+
+    a.button {
+        text-decoration: none;
+        border-radius: 0.25em;
+        padding: 0.5em 1em;
+        margin: 0.5em;
+        display: inline-block;
+        transition: all 0.2s ease-in-out;
+
+        background: #f5f5f5;
+    }
+    a.button:hover {
+        background: #00000a;
+        color: #f5f5f5;
+    }
+}

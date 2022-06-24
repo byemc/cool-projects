@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+
+<link rel="stylesheet" href="{{site.baseurl}}/assets/projectpage.css">
+
+<div id="projectheader">
+    {% if page.bannerimg %}
+    <img src="{{ page.bannerimg }}" alt="{{ page.title }}'s banner image.">
+    {% endif %}
+    
+    {% if page.icon %}
+    <img id="icon" src="{{ page.icon }}" alt="{{ page.title }}'s icon">
+    {% endif %}
+    <div id="somebasicinfo">
+        <h1 id="title">{{ page.title }}</h1>
+        <p id="description">{{ page.description }}</p>
+        <div id="buttons">
+            {% for button in page.buttons %}
+            {% if button.icon %}
+                <a href="{{ button.link }}" class="button"><i class="fa-solid fa-{{ button.icon }}"></i> {{ button.name }}</a>
+            {% else %}
+            <a href="{{ button.link }}" class="button"><i class="fa-solid fa-arrow-up-right-from-square"></i> {{ button.name }}</a>
+            {% endif %} 
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{{ content }}
+
+<head>
+<script src="https://kit.fontawesome.com/8ec6ed3b99.js" crossorigin="anonymous"></script>
+</head>
