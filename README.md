@@ -1,2 +1,2 @@
 # cool-projects
-A collection of cool, awesome, or just plain interesting projects on the internet!
+A collection of cool, interesting, or just plain awesome projects on the internet!
