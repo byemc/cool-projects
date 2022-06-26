@@ -19,7 +19,7 @@ layout: default
         <div id="buttons">
             {% for button in page.buttons %}
             {% if button.icon %}
-                <a href="{{ button.link }}" class="button"><i class="fa-solid fa-{{ button.icon }}-square"></i> {{ button.name }}</a>
+                <a href="{{ button.link }}" class="button"><i class="fab fa-{{ button.icon }}"></i> {{ button.name }}</a>
             {% else %}
                 <a href="{{ button.link }}" class="button"><i class="fa-solid fa-arrow-up-right-from-square"></i> {{ button.name }}</a>
             {% endif %} 
