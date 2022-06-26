@@ -1,13 +1,18 @@
 --- 
 --- 
 
-@import "{{ site.theme }}";
-
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 body {
     margin: 0;
     padding: 0;
+}
+
+span.currenturi {
+    color: rgb(149, 235, 235);
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -18,6 +23,9 @@ div.projectchip {
     border-radius: 1.25em;
     margin: 0.5em;
     background: rgb(224, 224, 224);
+    transition-duration: 0.5s;
+
+
 
     img {
         max-width: 100%;
@@ -46,4 +54,13 @@ div.projectchip {
         margin: 1rem;
         padding-bottom: 1rem;
     }
+
+    &.dimmed {
+        opacity: 0.5;
+    }
+
+    // &:hover {
+    //     font-size: 2em;
+    // }
+    // never use this again
 }

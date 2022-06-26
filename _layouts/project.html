@@ -5,10 +5,10 @@ layout: default
 
 <link rel="stylesheet" href="{{site.baseurl}}/assets/projectpage.css">
 
+{% if page.banner %}
+<img id="banner" src="{{ page.banner }}" alt="{{ page.title }}'s banner image.">
+{% endif %}
 <div id="projectheader">
-    {% if page.bannerimg %}
-    <img src="{{ page.bannerimg }}" alt="{{ page.title }}'s banner image.">
-    {% endif %}
     
     {% if page.icon %}
     <img id="icon" style="background: {{ project.bkgrnd }}" src="{{ page.icon }}" alt="{{ page.title }}'s icon">

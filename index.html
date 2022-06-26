@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/index.css">
 
 <p>{{ site.description }}</p>
 <p>Descriptions are a mix of one taken from the site or written by me. Any mentions of products or services are decided by <i>me</i>, not the person running the service. I just decided to write down a list of cool stuff, not get paid to endorse them lol.</p>
@@ -10,16 +9,46 @@ layout: default
 {% for project in site.projects %}
     <div class="projectchip">
         <a href="{{ site.baseurl }}{{ project.url }}">
-            {% if project.banner %}
-                <img src="{{ project.banner }}" alt="{{ project.title }}'s banner image">  
-            {% endif %}
             <div class="titlecard">
                 {% if project.icon %}
-                    <img src="{{ project.icon }}" alt="{{ project.title }}'s icon">
+                <img src="{{ project.icon }}" alt="{{ project.title }}'s icon">
                 {% endif %}
                 <h2>{{ project.title }}</h2>
             </div>
         </a>
+        {% if project.banner %}
+            <img class="abanner" src="{{ project.banner }}" alt="{{ project.title }}'s banner image">  
+        {% endif %}
         <p class="description">{{ project.description | smartify }}</p>
     </div>
 {% endfor %}
+
+<script>
+    // When a project chip is hovered over, dim the other chips.
+
+    var projectchips = document.getElementsByClassName("projectchip");
+    var projectchipslength = projectchips.length;
+    var i;
+    for (i = 0; i < projectchipslength; i++) {
+        projectchips[i].addEventListener("mouseover", function() {
+            var projectchip = this;
+            var projectchipindex = Array.prototype.indexOf.call(projectchips, projectchip);
+            var j;
+            for (j = 0; j < projectchipslength; j++) {
+                if (j != projectchipindex) {
+                    projectchips[j].classList.add("dimmed");
+                }
+            }
+        });
+        projectchips[i].addEventListener("mouseout", function() {
+            var projectchip = this;
+            var projectchipindex = Array.prototype.indexOf.call(projectchips, projectchip);
+            var j;
+            for (j = 0; j < projectchipslength; j++) {
+                if (j != projectchipindex) {
+                    projectchips[j].classList.remove("dimmed");
+                }
+            }
+        });
+    }
+</script>
