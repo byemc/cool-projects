@@ -12,4 +12,4 @@ buttons:
 bkgrnd: \#fcc2d7
 ---
 
-Great little service that allows you to have a fun online presence. $5 a *year* gets you a really customisable profile page and email address. It also allows you to change the DNS settings for your site as you want, set up pURLs (basically link shortners) under `url.lol`, or simply host a profile page linking to your works. You can see my page at [bye.omg.lol](https://bye.omg.lol).
+Great little service that allows you to have a fun online presence. $20 a year gets you a really customisable profile page and email address. It also allows you to change the DNS settings for your site as you want, set up pURLs (basically link shortners) under `url.lol`, post your status on status.lol, or simply host a profile page linking to your works. You can see my page at [bye.omg.lol](https://bye.omg.lol).
