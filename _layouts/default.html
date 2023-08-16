@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 {% seo %}
-    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | relative_url }}">
     {% include head-custom.html %}
     {% include styleimports_includes.html %}
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/index.css">
@@ -24,7 +24,7 @@
 
       {% if site.github.private != true and site.github.license %}
       <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
-        This site is open source. {% github_edit_link "Improve this page" %}.
+        (c) 2023 byemc.
       </div>
       {% endif %}
     </div>
